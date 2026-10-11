@@ -10,4 +10,8 @@ Date: 2026-10-11. Public GitHub Pages URL loaded in installed Chromium/Browse wi
 
 Screenshots: [desktop](desktop.png), [mobile](mobile.png).
 
-Keyboard, import and export follow-up results are recorded in the final verification update below. No real-device Safari/Firefox, screen-reader or load testing is claimed.
+No real-device Safari/Firefox, screen-reader or load testing is claimed.
+
+## Export and repeat-action verification
+
+Captured an actual live [shortlist export](sample-export.md) with LeadDev citation, check date, rationale, procurement question and risk. Selection remains visible in the comparison when filters hide its card. Reset and empty-state searches were repeated. Negative source age blocks export after the QA repair. Native select/checkbox/button controls are keyboard focusable; a full keyboard journey and screen-reader audit are not claimed.

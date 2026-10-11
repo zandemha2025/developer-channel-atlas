@@ -20,6 +20,11 @@ function render() {
   if (!Number.isInteger(c.maxAge) || c.maxAge < 0 || c.maxAge > 3650) {
     document.querySelector("#error").textContent =
       "Source age must be a whole number from 0 to 3650.";
+    document.querySelector("#export").disabled = true;
+    document.querySelector("#results").textContent =
+      "Correct source age to see current matches.";
+    document.querySelector("#count").textContent =
+      "Filters invalid; export blocked.";
     return;
   }
   document.querySelector("#error").textContent = "";
