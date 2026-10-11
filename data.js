@@ -1,9 +1,130 @@
 // Verified public-source facts; fit and execution notes are editorial judgments, not measured performance.
-export const channels=[
-{id:'dev-ads',name:'DEV native ads / takeover',provider:'DEV Community',kind:'Community',audiences:['Practitioner'],goals:['Awareness','Activation'],formats:['Native ads','Homepage takeover'],route:'Paid — request current package',status:'Confirm availability',facts:'DEV advertises native ads and a homepage banner linked to a dedicated DEV post.',source:'https://dev.to/advertise',checked:'2026-10-11',fit:'Use a concrete working example to introduce a developer tool.',limit:'A developer community is not a verified list of budget owners. Package price and inventory are not public on the inspected page.',question:'Can the package target the stack and seniority of our ICP, and how are qualified actions measured?',test:'Tagged landing page with a runnable sample; measure activated eligible accounts, not raw clicks.'},
-{id:'dev-challenge',name:'DEV product challenge',provider:'DEV Community',kind:'Community',audiences:['Practitioner'],goals:['Activation'],formats:['Build challenge'],route:'Paid partnership — request scope',status:'Confirm availability',facts:'DEV offers partner challenges designed for community members to build with a product.',source:'https://dev.to/advertise',checked:'2026-10-11',fit:'Useful when a developer can reach a meaningful first use within a challenge.',limit:'Contest participation can attract prize seekers. Engineering support and judging capacity are required; procurement terms unknown.',question:'What are participant eligibility, rights, moderation and activation reporting terms?',test:'Predeclare qualified first-use and retained-use definitions; separate contest entries from product adoption.'},
-{id:'stack-ads',name:'Stack Ads targeted placements',provider:'Stack Overflow',kind:'Media',audiences:['Practitioner','Technical buyer'],goals:['Awareness','Activation'],formats:['Display','Native ads','Tag sponsorship'],route:'Paid — contact sales for pricing',status:'Confirm availability',facts:'Stack Ads lists banner/native ads and topic-tag/site sponsorships; skill, tag and interest targeting is described.',source:'https://stackoverflow.co/advertising/',checked:'2026-10-11',fit:'Consider a focused technical use case aligned with a relevant tag.',limit:'Targeting relevance does not establish buying authority or incremental demand. Current pricing/minimums require a quote.',question:'What tag inventory, frequency controls and holdout/measurement options are available?',test:'One stack-specific audience, one offer, tagged eligible accounts and a predeclared quality gate.'},
-{id:'leaddev',name:'LeadDev partner content / panels',provider:'LeadDev',kind:'Media',audiences:['Engineering leader','Technical buyer'],goals:['Consideration','Awareness'],formats:['Partner panel','Partner report'],route:'Partnership — verify commercial scope',status:'Confirm availability',facts:'LeadDev describes its audience as engineering leaders and publishes partner-labelled reports and panel discussions.',source:'https://leaddev.com/',checked:'2026-10-11',fit:'An evidence-led leadership conversation fits a complex organizational problem.',limit:'Observed partner content does not confirm current inventory, price, lead access or guaranteed editorial acceptance.',question:'Which leadership roles and regions can be reached, what is the editorial policy, and what consent governs lead capture?',test:'Educational panel plus a relevant diagnostic offer; qualify opt-in conversations by problem and role.'},
-{id:'infoq',name:'InfoQ editorial / architect readership',provider:'InfoQ',kind:'Publication',audiences:['Technical buyer','Practitioner'],goals:['Consideration'],formats:['Technical article','Architect newsletter'],route:'Earned editorial — no acceptance guarantee',status:'Editorial review',facts:'InfoQ covers professional software development and offers a Software Architects newsletter; its site links to Write for InfoQ.',source:'https://www.infoq.com/',checked:'2026-10-11',fit:'A substantive technical architecture lesson may reach readers evaluating a category.',limit:'Editorial coverage is earned. No paid placement, newsletter inclusion, reach or acceptance is assumed.',question:'Does the proposed article meet editorial requirements without disguising a sales pitch?',test:'Propose an original technical lesson; track qualified referral engagement only if accepted.'},
-{id:'kubecon',name:'KubeCon + CloudNativeCon NA 2026',provider:'Linux Foundation / CNCF',kind:'Event',audiences:['Practitioner','Technical buyer','Engineering leader'],goals:['Consideration','Awareness'],formats:['Event sponsorship'],route:'Closed for current event — research future editions',status:'Closed',facts:'The official North America sponsorship page lists Salt Lake City, November 9–12, 2026 and states sponsorship opportunities are closed.',source:'https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/',checked:'2026-10-11',fit:'Cloud-native infrastructure conversations; use future-event research only.',limit:'Excluded from actionable shortlist. No current sponsorship booking implied; event logistics and future inventory need rechecking.',question:'For a future edition, what account fit, total activation cost and consent-based follow-up plan justify event spend?',test:'Before any future commitment, estimate travel/staffing costs and qualified meetings against an alternative channel.'}
+export const channels = [
+  {
+    id: "dev-ads",
+    name: "DEV native ads / takeover",
+    provider: "DEV Community",
+    kind: "Community",
+    audiences: ["Practitioner"],
+    goals: ["Awareness", "Activation"],
+    formats: ["Native ads", "Homepage takeover"],
+    route: "Paid — request current package",
+    status: "Confirm availability",
+    facts:
+      "DEV advertises native ads and a homepage banner linked to a dedicated DEV post.",
+    source: "https://dev.to/advertise",
+    checked: "2026-10-11",
+    fit: "Use a concrete working example to introduce a developer tool.",
+    limit:
+      "A developer community is not a verified list of budget owners. Package price and inventory are not public on the inspected page.",
+    question:
+      "Can the package target the stack and seniority of our ICP, and how are qualified actions measured?",
+    test: "Tagged landing page with a runnable sample; measure activated eligible accounts, not raw clicks.",
+  },
+  {
+    id: "dev-challenge",
+    name: "DEV product challenge",
+    provider: "DEV Community",
+    kind: "Community",
+    audiences: ["Practitioner"],
+    goals: ["Activation"],
+    formats: ["Build challenge"],
+    route: "Paid partnership — request scope",
+    status: "Confirm availability",
+    facts:
+      "DEV offers partner challenges designed for community members to build with a product.",
+    source: "https://dev.to/advertise",
+    checked: "2026-10-11",
+    fit: "Useful when a developer can reach a meaningful first use within a challenge.",
+    limit:
+      "Contest participation can attract prize seekers. Engineering support and judging capacity are required; procurement terms unknown.",
+    question:
+      "What are participant eligibility, rights, moderation and activation reporting terms?",
+    test: "Predeclare qualified first-use and retained-use definitions; separate contest entries from product adoption.",
+  },
+  {
+    id: "stack-ads",
+    name: "Stack Ads targeted placements",
+    provider: "Stack Overflow",
+    kind: "Media",
+    audiences: ["Practitioner", "Technical buyer"],
+    goals: ["Awareness", "Activation"],
+    formats: ["Display", "Native ads", "Tag sponsorship"],
+    route: "Paid — contact sales for pricing",
+    status: "Confirm availability",
+    facts:
+      "Stack Ads lists banner/native ads and topic-tag/site sponsorships; skill, tag and interest targeting is described.",
+    source: "https://stackoverflow.co/advertising/",
+    checked: "2026-10-11",
+    fit: "Consider a focused technical use case aligned with a relevant tag.",
+    limit:
+      "Targeting relevance does not establish buying authority or incremental demand. Current pricing/minimums require a quote.",
+    question:
+      "What tag inventory, frequency controls and holdout/measurement options are available?",
+    test: "One stack-specific audience, one offer, tagged eligible accounts and a predeclared quality gate.",
+  },
+  {
+    id: "leaddev",
+    name: "LeadDev partner content / panels",
+    provider: "LeadDev",
+    kind: "Media",
+    audiences: ["Engineering leader", "Technical buyer"],
+    goals: ["Consideration", "Awareness"],
+    formats: ["Partner panel", "Partner report"],
+    route: "Partnership — verify commercial scope",
+    status: "Confirm availability",
+    facts:
+      "LeadDev describes its audience as engineering leaders and publishes partner-labelled reports and panel discussions.",
+    source: "https://leaddev.com/",
+    checked: "2026-10-11",
+    fit: "An evidence-led leadership conversation fits a complex organizational problem.",
+    limit:
+      "Observed partner content does not confirm current inventory, price, lead access or guaranteed editorial acceptance.",
+    question:
+      "Which leadership roles and regions can be reached, what is the editorial policy, and what consent governs lead capture?",
+    test: "Educational panel plus a relevant diagnostic offer; qualify opt-in conversations by problem and role.",
+  },
+  {
+    id: "infoq",
+    name: "InfoQ editorial / architect readership",
+    provider: "InfoQ",
+    kind: "Publication",
+    audiences: ["Technical buyer", "Practitioner"],
+    goals: ["Consideration"],
+    formats: ["Technical article", "Architect newsletter"],
+    route: "Earned editorial — no acceptance guarantee",
+    status: "Editorial review",
+    facts:
+      "InfoQ covers professional software development and offers a Software Architects newsletter; its site links to Write for InfoQ.",
+    source: "https://www.infoq.com/",
+    checked: "2026-10-11",
+    fit: "A substantive technical architecture lesson may reach readers evaluating a category.",
+    limit:
+      "Editorial coverage is earned. No paid placement, newsletter inclusion, reach or acceptance is assumed.",
+    question:
+      "Does the proposed article meet editorial requirements without disguising a sales pitch?",
+    test: "Propose an original technical lesson; track qualified referral engagement only if accepted.",
+  },
+  {
+    id: "kubecon",
+    name: "KubeCon + CloudNativeCon NA 2026",
+    provider: "Linux Foundation / CNCF",
+    kind: "Event",
+    audiences: ["Practitioner", "Technical buyer", "Engineering leader"],
+    goals: ["Consideration", "Awareness"],
+    formats: ["Event sponsorship"],
+    route: "Closed for current event — research future editions",
+    status: "Closed",
+    facts:
+      "The official North America sponsorship page lists Salt Lake City, November 9–12, 2026 and states sponsorship opportunities are closed.",
+    source:
+      "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/",
+    checked: "2026-10-11",
+    fit: "Cloud-native infrastructure conversations; use future-event research only.",
+    limit:
+      "Excluded from actionable shortlist. No current sponsorship booking implied; event logistics and future inventory need rechecking.",
+    question:
+      "For a future edition, what account fit, total activation cost and consent-based follow-up plan justify event spend?",
+    test: "Before any future commitment, estimate travel/staffing costs and qualified meetings against an alternative channel.",
+  },
 ];
