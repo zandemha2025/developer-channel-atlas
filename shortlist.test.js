@@ -1,0 +1,8 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {channels} from './data.js';import {ageDays,filterChannels,rank,exportShortlist} from './shortlist.js';
+const today='2026-10-11';test('all records have unique IDs, HTTPS citation and actual check date',()=>{assert.equal(new Set(channels.map(c=>c.id)).size,channels.length);channels.forEach(c=>{assert.match(c.source,/^https:\/\//);assert.equal(c.checked,today);assert.ok(c.facts&&c.limit&&c.question);});});
+test('closed inventory excluded by default',()=>{assert.equal(filterChannels(channels,{today}).length,5);assert.equal(filterChannels(channels,{today,includeClosed:true}).length,6);});
+test('audience and goal filters intersect',()=>{const r=filterChannels(channels,{today,audience:'Engineering leader',goal:'Consideration'});assert.deepEqual(r.map(x=>x.id),['leaddev']);});
+test('query and format-type filters work',()=>assert.deepEqual(filterChannels(channels,{today,kind:'Publication',query:'architect'}).map(x=>x.id),['infoq']));
+test('freshness removes old and future-dated data',()=>{assert.equal(ageDays(today,'2026-10-12'),1);assert.equal(filterChannels(channels,{today:'2027-10-11'}).length,0);assert.equal(filterChannels(channels,{today:'2026-10-10'}).length,0);});
+test('ranking is deterministic and closed opportunities rank last',()=>assert.equal(rank(channels,{audience:'Engineering leader',goal:'Consideration'}).at(-1).id,'kubecon'));
+test('shortlist export preserves sources and limitations',()=>{const s=exportShortlist([channels[3]],{},'Test a leadership offer');assert.match(s,/https:\/\/leaddev.com/);assert.match(s,/Test a leadership offer/);assert.match(s,/No paid affiliations/);assert.throws(()=>exportShortlist([channels[5]],{},''),/Closed/);});
